@@ -1,0 +1,300 @@
+/* Everything in this CSS file will be repeated onto all the pages I have on my website
+   All the CSS in this file is coded by me unless stated otherwise
+*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav {
+
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav .mainMenu {
+
+    display: flex;
+    list-style: none;
+
+}
+
+nav .openMenu {
+    text-align: right;
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu {
+
+    font-size: 2 rem;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+
+    nav .openMenu {
+        display: block;
+
+    }
+
+    nav .mainMenu li a:hover {
+        background: none;
+        columns: orange;
+        font-size: 1.6rem;
+    }
+}
+
+.hero3 {
+
+    /* Size and styling for the hero image */
+    width: 100%;
+    height: 100%;
+
+
+    /* Background size and styling for the hero image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYSFRIVFhYSEhISGBIREhISERERERIRGBQZGRgUGBgcIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDs0Py42NTEBDAwMEA8QHxISHzQrJCs0NDE0NDQ0NDQ0NDQ0MTQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDE0NDQ0Nf/AABEIALcBEwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECAwUGB//EADYQAAIBAgUCBAQGAgICAwAAAAECAAMRBAUSITFBUQYiYXETMoGRFBUjQqGxUsHR4TOCB2Jy/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAIhEAAgICAgIDAQEAAAAAAAAAAAECERIhAzFBURMiYUIy/9oADAMBAAIRAxEAPwAPM/C1LEhmA0ta4I2N551meAag+ht+bHvOrw3i1qDVFdSyXChh08o5EEzvDHEoK6cf6nJwZxdS68HTzYyVx7OStJqsk6FTYixESzss56JLPRsuxeAxOV/hPhqmORdZqfCBfWH/APMKnUEGxF+tuJ50BLEax2uD3BsZLY6IVqZRmU2OhmW44Nja49JET1jw34UwOY5YVpaPzBVu9RmcPTrFjpDAfsIFthxfqJ5jmGAqYao9KqjU6lM2ZGG/cEdwRuDKUrEDASaiMBJqIWOhER1WTtEsLChgkJo1CrckSsQ+gi9R9YnIKKjiXJsCT9Ydg8a6cMR6SlMMim97X+0Py3IqmKqCnQGtrFjcgADuT0ktoewkZw/BaJc2PeB5rk74V2p1fI62uL32PBB6iBol+sWKHbNn8+YbXkx4jYdf6mE2HBPzSvHqBbTDGL0GTOi/Na1fy00eow3IRCxt9Jmvj6ocOBpK7EEf3Nz/AONvEi4JqwdGZagXzLp1KVvtv0N/4EyvEmaGvXrOqhA7Frdgf9xJJOqC3Vix+eNXTS1rgdhMrLsc1NiRv9JU9I6bjkzd8F5KMXXFJjpvck9gASffiVUUhbbI4nPCUIIH2gOFzG+1hOj8beHVwbKgYMHXUp4NrkWI9xOMXCvTO/HcSUotDbdnWYTFsiMxAt02gNTOXfdnY9BcnjtFWrhqNh0Ew3cgCJRTBtmjRqa2B9Z67luXU8PhFxAN3CCoWB7n5R/U8cyvdl953buxoaNR02vpubX9phy1dM0hdWjdxnjShiVWmquKgNzqACrbYkG/WLxRn1KphlpqDr8t7iwUAWIB63nl9YMr3W4N9iJtUC5Ua3uAONr/AFip3d9jVVXoxswXyg951OUj9NPYTnc6xCMAE6czo8q/8aewi5HcSo9htoorxTA2PMcxpk+X/N9X/qBOtyumBhCTwDa05itmCu2kr5l8oNuB7zfp4i2GCf5Nx9Z1XLSOaltgb5cmJrBB5drn7TmsfhhTqOgNwptedNkhdsVZQT5fNboJl+IcN+u5AsDz/wDrrNVN5Y/hLisb/TGBk1k1SSKTUg0vD+f1sBWWtRbfh6bE6Kqb+RwOebg9DG8TZ8+YYhsRUVEYqlMIl9Kot7C53JuTvMl4wgBKSSMBJgRWBNQJKwlay5IhjqsMwVNmawlKLL8C5R7iFjo6HOvC+IpYZazIBT8pvqGoA8EjkXlXgvPWwNQ1FAcOpVkJtdSQeem4E2s88ZVMVhRh9CrcIruD8wW1tum4ExMrywFPMQD7yFLWwrZZ4mxDY+u1drLcBVQcKoFgJPD+GsS+GaqtI/CGo6rjUVB3YLyQO8tbKwP3j7zrsFn7JhfgeTZSge+4B52+pkudIeJ5dgMues4RLs7EKB3Ym1ppeIvCuIweg1VAD30lWDC/UXHWaGVYZsPXFVHXUG1AHve86PxNmD49URlVFW5sD+49f4jfJTBRPNKRZTtJMNR9ZvYzKfhre4+8Gw2C1bm21j9peaexUSqeHMQmHWs9NhSaxV9vlPBI6AzNw1d6LLUpMyOpurKbEGej5j4nNTCfA0qDpWmzXuSq2tYdDsJxgy7UuwkqV9jxMzG5lWxL66ztUe1tTdAOAANgITRy6tVpu6o7U15YKSBt1PSSGXEGd/4Y8SJh8K1BkJca7WtpbUOsTkl0GLOEyvCB0KE6STY36X6zb8e+DqeBpUHp1GfUSjBrXJ031Lbp/wBTNw1ca3a21zcRs1xy1BpZiQoAW5JAHYX4iydhiDeGcvao6AC9zPRauXJTQl2A27zzHC562GIZLX6X4leOz2viW1O5I6DhR7CZT4pTlfgqLSVGnmWJTUdHQnjqIA9R6m24EHyqnrZyd9+s3aVICOlHQ1sxcVQKKL9Z12Wt+mnsJz2ecL9JuZcfIvsIpbiVHTDdcaR1xTKizz5cGUdmPXcTUw7avhr9YPiMcjtYHcbWhGAQ6wbbATZN3syklWjd8DUr4qudtkAt68zC8U4kfiKqdma32EL8NYw08RiCObDrbbeZPiCr8Ry/7iTeEYv5nJ+kDf0oy1jusZZJp0mIMxjiM/MkogA6iSE08Jgg6bcmaWEyAaSX3MWSEpfhzqgS9BDMwywU91vzKGNiq9CReNKwyouorNBsncU/ijcdrbQdEANvSdLTzCo9CnTSg7aiFUgCxt152G3JmE5OL0bRSaB3yOrTp03Hm16drDrJY/J61P4fNnt6WnVLmjVECCg4akUDggDewNgf3bdpDO8a1R6VMI1M/NuLXA6Cc65pZU6Nfj1YVg8oQIpYb26x8TlqWFl262h9Sm5RbjSo5MPwNAFB1ic23SLUElbPPM8oogGhWve1xNPLcuLAFr7ibfiHCrpWwHzDpCcNhT5e1hL5G8ddmcUsjM/Ikb5heYWf5WlN6apdbmxtO/CWNrTn/FOFYtSIA+b/AFMY80lo1+ONnN08pW3U95o4DI1e1r26wnDuE2a283MvKqPLxFyczrTGoq9I5PNstWm4VR5m2A35mLi8FXp1NAUXYagd7Wna51QZ3BQEvyvHN5z2b42oayqFPxaanUu3yngzXhm5JWZTVM5BqlX9RAout9XMhgMIag1NFUxdQPWYKTc+f0Nt4dlB/THrOqWo6MY7ZkZrRCso6ROgtt2ks++dZNF8o9oJ/VD8snkf7/ebaGYmS8N7n+5rqZEuxx6AM8b5fcTcwDeRfac/nR3T3E3MEfIvtFLoa7DNUUrvFIoqzg3y16bM7rYHdfWdLlGGqYkKqWDNsCekCzjxKuJRKappKixO3pxD/DedU8Maeo20kXmjyktrZk6qkGYnwHisPqqK6Pcb2UgznM1y16agsN+s9bxXjTC1ECrUQswtpDC95534rxyPspveVFyyJpUcisdjIgxmM2JK2ivHCkxQA6HKSAg7zZR5zGGxQVL9RL1zr0g4tmbZsuwcnbYcmc7im8/sZv0K2ujU0/Mf+JzNdGU+YWPMXG+y5RqjSom5nTZXmLoKaq6AJsLgXt2PpOUwKs4MJwGXFmHnYXPec/Ik7s3i6So9AyzEVA1Ryyt8QqQABZbACw9NoRXqtUq03YABLjbuSP8AiZGDwvw7KXNum80Mfh3poGvsbb9j0nnyaUjdT1R3gUOoB4IlGHw5pkgHy9B2nDp4krIAt1sPeOPEdZjYEfzNsl20QpUqvR0ue1LhB/8AYQ7CW2+kwMppNjG0u5UJZvLsT950tXKgqnS7ggbXII+sa5ck2l0K0tCr35WYmZK1RqasdIBv77TJxPiipTLAaGKkjk72Npy+beKK9V1NgmnsSbzOKytotcqito7PE4SnqFzuPWaWApKFbe/Yzz7A4p3Opnv6XM1mzhwugEDpe8xkqlTK+RN2tHT5dilLi++m4+sz6VNTjcRVYeUoiJttZbkn+ZiYbEMgNmFz3vKMRmzrzoP3/wCZpHkS0hSkm7MzGkU3xflOl2YqSu28Ey1dKCE1cQ1d0QgWYgG1+JoZhgRT0gcWnSuVP6szq9o47PT51lysNH0g+dn9QSxmAT6Tp/lGfll+S8N7maizLyP5T7zVtJl2C6MnOW3T3m7hPkX2mBnJ86e4m7hT5F9oSWkNdl0UjqiklGBm2RJhhTZHLFxdgSDvbkTBxPPBhuIxzvpVhsODNTAYhCgUqNQmqyT2ZtJrRzlF7Mp4tNGqhqEMDtNDN/hmk2lQGEqwFNfw+pubn+7TRvVmdVoxXFiREDLMYgU7dZUik9IwLMOdz7SpustoDc+0qfk+5gAflyKR5tx2geProHIUW+lpGlUIF4Kia3ses1izJrdmvl+efD2IuJKvm9OowLLx6RlyIHcEzSo+DgbEva+8hqC2Wm3oVGuj20WAHIhSk6rqLQcZN8G5U3K878iQfHAeb7+8UuJVfgqM90wzHZnpsCLsJ0eG8QLVoCmQdYAG84b8UGJYgn6Q7LsxDMBa05eXgi110aR5VdX2adZzf0kqeKdeLRVFU9ZQp3teLi41Lsq6NXB5tWpNqA3t0vC08TYmoSh2De/EDLeURsE+l1J43/qKXCqbo2qNaYKylnK2Nxctz1ma7pqYHpcCdi701bVcXYCcnjEQvU35YmZwr0ZSVEcPilVeTeaCV0e1j7zGFC5Nv9zY8L5IcQ7LrCEAk3BJt7SpcUXslSfosxjqCNBuOu94FiKjES3NMO2HqvSZgxQ2uOCLXB/mVYZrNfkdph8dMLK8rLfGp37zqc43t7TnKLfrI3AJm/mD3IHpBr7I0j/lnn2eH9URy+oW7CNnw/VtIItgfad6X1Ri3tmnkfyH3mneZWWtop36mHo9wCb7yXtlLoy84bzp7ib2GPlHtOezU3dJvYb5R7COXSBdl14o0Uko5rMF+T2EbBkKQTBqmIVreb+ZKkyHlrfUS1fkh14CcYjVFYopYHtLsPhagw4XQ9734Pe8Hp44UxZXFvWxmhSzttB86e1v+5TboVIBfCsSNSG3tHo4UqCLHqRtGq5ix/ev2EgmZkfuWX4IoFKNrPlbr0MHqIwJuCNzyDNRMysb3WV4nMS/+MB0ZiJsZTh1IcGHldW+oCVqq3+Ye8pMho1BjGWwEIq496mnc7dpl00APziaOHTs6xya9DjFhqVGcW1WvtvMPE0yjOl9XUTSq4Rrag4HteZOJplW1ar977wTTiKUXZVSxRpgiw37ypMQVNwd5VXfWbyAWIhce+wz8yfvJLmjjrBAse0SpdGuzTGf1bW2lbZ3UMAtFaNu+x2wx83diCSdvWNSzIqSbXJ9YJaK0jFBs0qWdMpvbn1ksNnLioGRmptflGKn+Jl2iB07iCjFO6G23GrOpeoztcklm3JJuSe5JhljQUu1j2sZyuEzAqbtCsVmTVBySOxkPjylYk6iXYnOGurKODGqeJqjG9v5mYReRZBKfHG7oak6LKmKao+thLzilbrtxIHF+TRpHvBEUAWlYis1sRXQooB3FoQ2aLoUdRMItGvEopCsPq19bqfWdPQ+Ue04yk1iD2mzSzq1gRIlH0XF+zfvFMb87XtFJxZVmFhssZ11k7WvKnwwsd4bSxQ+GqjtKX+UzRN2Z0qBBR2kBTl44kUlpsmgNkIkbQ1xtK1EtS0KgbeXKpI5jkbywCDYJECnrK2UiFLI1RxBSBoH0n1l2Hw7uQFDG/aXrtNjKMatMdLxOTrQJIlm/h96FJXV2YWuwJ245mbiKY0IR15mrnOcl6bJcWb+jMmtihoReoihbWxyavQCRYmSBjO28QiYImDFFeKIoUV4ooAPeLX0jiReCGOIxibiINbeAhxQY9DLfhleRIriWEdsV/lEm7DRMCRMmmKUy3RfpC6CrBCYxhbYa/SVthT2MeSDFg0V5a2HfsZBqbDoYWhUOj2hFNx1EFG0mDJaNEG607RQTVFJxKsoV7KJJa1xxIAbLLMMNjL0YjioO0r+MOLbywwZhv8AWNbB2XXuDtJ0qY7GCvUI2HWWpUcDmVVIVk2p3bYGJ0t0kPjODe8j8dmO8KC0TDWO8m6XIsDKah2j0qrkj0gl5C0GNRNuD9jIDBgpqGoN9RHbFuAdx9pSMye2naNfg3j5BXDA2a9/WRvJVqpc3PMiJfgzZaJMSISSCGZtFpkrx7xvhntFoPrFQ8h4rxfDPYxtB9YUFk7yLxtJ9ZF7iKgssA2kQpIiVjLMPvfe0BlaoZVVEKUC5GqV1kHQ3gnsTQLT5hBxLC28p0WjOZemTtBgxbd4vx735gIYyaG5F4sUPJhxxzGVvi2j/h+xkDQipDtkBUvLA0j+HEY0iOIUhplt48Hu3aKKh5EgNl9oRhqTaSbbQJKhNtuBNPDfFCbKdJ4hJUiUyAos3AgtSiwvtwYZRWqm+k/xKatRzruPeCBgJF2AhRpMOhg9N7MCNzNI41v8f4lSsSAnpm3BlKLuJo1cYSpGn+INh2867RK6B9kaq2EWGHMMzUjba0HwdbSDteNbiJ9j1V2Mz15mrWxN1I0/xM1UlR0JkDJryJFhLEpkkbGNiNmjTGkS5KI7R6SbCEUknO2boZcMO0kMKO0MRNpMJM3JjoC/DDtF+FXtDgscrFkx0gD8KvaZeMoAuqgToDMxEvUJMtSYmhVMKqqduBBaGXBhc9Yfjn8tu8spkBR6CGToKMN0Sm9juIqr0zwLSVVASznjp94JWYX2mi2Q3Q7FO0ZtPaVIe8eow2tKomyFUDpK5cRKwN5SEySMRwYTTxI4b7ykpaMYig8IDwbxzSMBQkcbSw4hu8VBYTo9I8D+O3eKFBZo5biqCCpqG7Lt79ps4HPKC01U2BAnM08BqW+4Ml+Xe8zlBS7GpNHTNnNDuJj4nGIxqW/dxM84GDOgHWVHjiuhSk2NQIDC+00TXX/ITOWncjeX/hPWXKiVZbVqqQfMJRQqAOpJ2vJNhPWDtS4gqB2aGZ1lYixvKMM623NpS1C3WTw+DLC94aSDdhJdf8hBqlr7ES78vbuJA4RgbXEE0DsgbWA63H9zocPhFsu3Sc0q2dfQidlh2GlfYSZlRICgJalGE0xeEJT9Ji2aJAwpx9MNCekiUklAeiJUhfw4604ADfCg1SiAb2mr8OU1KMSYMwsTYuu2wksTVUIZpVcOObTOx9IeUdzLVMkEphQguLymqiW+WaZoADiU1VHaUhMwmdQ3G0rxNRWtpFpsFEPQSjEIgB4lqSIaAEdQLGUkXbyw3DugHm5lfxFD3HyxpiZWQYlp3G8LqOjcGDMLcQTGVlLSiotzCtd41NNRIlCKBSMU2ky4WG5ihbCkOKxHSW02J6S2nQAFzH19thIaaCweq4XkQF0Q3OmHVEDGQakOIIDOpAAg22l74hB0l/4YCMMKsYA61lPSVVQCRYQ5cMI5wojsACu66bAby3C1QBa0KbCAy5KIUcCF6AGaqAOJUmIUm9jDjhg+3EuOWIqjuYtBsysDhFqOWYkAG86VHpgAXO3vMmkgRiBxCVMmVtjjo1KWMRe8Mp5jS9Zgl46sJDjZeRunM6frIHM07GYmuI1IYIMmbozBLXtJDMEtextMfD1Bx0MvqLoFuQYnFBkzapYqmwvq37SD4pL2vMPX8MaufSUfmKuwFrQ+MeRuviaZ2vB8QaexuDM3F1gpG2x6xtjBRFkH/ESVuEPaBSDCNRFYWadP0lL4Sk3NpURGtHTCya5NSbiRfI6Y5NvvLMO9jsbGGGqrbMN/7hckGjLXJ6P+X8y9MupAWEhUo2bbaEnDbXveG35DRlYjLlB2MHXCkbi01moygraNSZNIknAile0UeTCkUfEJ2vGL9IopoZiDRXiigBIGNeKKAxwZNdzFFAA6pTCp6ypKYtvFFCIGfUxRVjbiH0axZCzdBtFFExgmGbUSTCAYooAImSvFFABCSAiiiGSp8iE1qu4Q8d40UdaAhWa3l6Sunl6tvc3iighE6tIGyHjoZXo0bc9oopLAjqi1XiijAjeICKKIY5En8Tax56GKKMCdKz7HnvLrFOtxGiiXYgGrjN7WsZGpUvFFHQFd4oooAf/Z");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+
+    /*container size and style */
+    position: relative;
+    font-family: 'Freestyle Script';
+
+}
+
+/* This is CSS from the example used to make the forms */
+
+.column {
+
+    /* Three equal columns that float one below the other */
+    float: left;
+    width: 28%;
+    padding: 20px;
+}
+
+
+.row:after {
+
+    /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-block-contact {
+
+    /*Text block size and styling - changed to fit my form style */
+    position: relative;
+    font-size: 3.5em;
+    color: white;
+    padding-left: 20px;
+    text-align: left;
+
+}
+
+.text-block-header {
+
+    /*Text block size and styling*/
+    position: relative;
+    transform: translate(90px, 50px);
+    font-size: 2em;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 15px;
+
+}
+
+.text-block-p {
+
+    /*Siz and style for the text in the form - changed to fit my form */
+    position: relative;
+    transform: translate(100px, 10px);
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    color: white;
+
+}
+
+.login-page {
+
+    /* Login form size */
+    width: 30px;
+    padding: 10% 0 0;
+    margin: auto;
+
+}
+
+.form {
+
+    /* Size for form box */
+    position: relative;
+    background: #333;
+    width: 350px;
+    height: max-content;
+    transform: translate(-50%, -45.5%);
+    padding: 30px;
+    text-align: center;
+
+}
+
+#register {
+    transform: translate(-50%, 20%);
+
+}
+
+.form input {
+
+    /* Style for form input */
+    outline: none;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+
+}
+
+.form button {
+
+    /* Style and size for form button */
+    text-transform: uppercase;
+    outline: 0;
+    background: orange;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.form button:hover,
+.form button:active {
+
+    /* Hover effect for register button */
+    background: green;
+    border: none;
+
+}
+
+.form .message {
+
+    /* Style for form message */
+    margin: 15px 0 0;
+    color: #fff;
+    font-size: 12px;
+
+}
+
+.form .message a {
+
+    /* Style for form message */
+    color: orange;
+    text-decoration: none;
+
+}
+
+.register-form {
+
+    display: none;
+
+}
+
+/* The size of th screen will change accoring to the device being used 
+    e.g. mobile version will display the hero text smaller than on desktop */
+@media only screen and (max-width: 480px) {
+
+    .hero3 {
+        font-size: 5px;
+
+    }
+
+    .container,
+    .row:after,
+    .column {
+
+        text-align: left;
+        color: white;
+
+    }
+
+    .column-middle {
+        width: 10%;
+    }
+
+    .text-block-contact {
+
+        position: relative;
+        color: white;
+        font-family: 'Freestyle Script';
+
+    }
+
+    .text-block-header {
+
+        text-align: left;
+        font-family: 'Freestyle Script';
+        transform: translate(-10px, 25px);
+
+    }
+
+    .text-block-p {
+
+        top: 13px;
+        text-align: left;
+        font-family: 'Freestyle Script';
+        transform: translate(8px, 0);
+
+
+    }
+
+    .login-page {
+        position: relative;
+        top: 110px;
+        bottom: auto;
+        text-align: center;
+
+    }
+}
