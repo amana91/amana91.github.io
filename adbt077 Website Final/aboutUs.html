@@ -1,0 +1,187 @@
+<!--
+Code without references was coded by myself
+using own experience, knowledge and personal project references 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        This specifies the character encoding for the HTML doc
+        The browsers viewport is the area of the window which displays the web content
+        width=device-width sets the width of the page to follow the screen width
+        initial scale sets the initial zoom level when the page is first
+        loaded by the browser
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--When on this page it will indicate in the tab bar the page name-->
+    <title>About Us - The Hotspot Café</title>
+    <!--CSS to use for this webpage is below-->
+    <link rel="stylesheet" href="css/populate.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <!--When the logo is pressed on any page it will redirect to the homepage
+        The logo was created by myself using an online website tool - https://www.freelogodesign.org/-->
+    <header>
+        <a href="homepage.html">
+            <div class="header img">
+                <!--This is where the image is called from-->
+                <img class="logo" src="img/Logo.jpg">
+        </a>
+        </div>
+    </header>
+
+    <!--Nav bar which links to their respective page when selected-->
+    <nav>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="loginForm.php">Login</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+        </ul>
+    </nav>
+
+    <script src="javascript/populate.js"></script>
+
+
+    <!--Hero image which has a header stating the user is on the About Us page
+        Hero image was used from this website - https://www.pinterest.jp/pin/ATu1UbuqDc20uQQUGVod3IvxbZH1vTpd9G7GtsnPHBMe2o5Ed1e9qFs/-->
+    <div class="hero2">
+        <div class="hero2-p">
+            <!--Text on the hero image-->
+            <h2>About Us</h2>
+        </div>
+    </div><br>
+
+    <div class="about-p">
+        <!--This div class contains different paragraphs of information about the business to let the customer know more about the business-->
+        <p>The Hotspot Café, is a place for students and young people to come work, socialise or even relax. This allows
+            them to work remotely from a place of comfort and peace. The Hotspot Café allows, <br>for everyone to
+            essentially come for
+            fun and work, there will be a quiet zone for those who want to come for work, a zone for socialising
+            or relaxing and another for recreation.</p><br>
+        <!--This div class contains different paragraphs of information about the business to let the customer know more about the business-->
+        <p>Each zone to fit the needs of young people who want a change from home.
+            Creating a space like this will encourage young people to work in an environment
+            where they are comfortable and a sort of escape from reality for some as well.
+            <br>Having a workspace and café in one will enable all to have an experience like
+            no other.</p>
+
+        <p>See what we have to offer
+            below.</p><br>
+
+    </div>
+
+    <br>
+    <!--Between two different paragraphs is a carousel which shows images for the company-->
+    <div class="block">
+        <!--This div is the carousel of images for the business-->
+        <section>
+            <div class="carousel-container">
+
+                <div class="myCarousel fade">
+                    <!--
+                        This div class is used for every image as it will be the transition between each image
+                        This image was used from this website - https://www.behance.net/gallery/34127855/The-Coffee-Shop
+                        Author: Rafael Gregorio 
+                    -->
+                    <img src="img/interior1.jpg" style="width:100%">
+                </div>
+
+                <div class="myCarousel fade">
+                    <!--This image was used from this website - https://www.pinterest.com.au/pin/577586720940864139/
+                        Author: Squires Real Estate  -->
+                    <img src="img/interiordown.jpg" style="width:100%">
+                </div>
+
+                <div class="myCarousel fade">
+                    <!--This image was used from this website - https://www.coffeekiwi.com/ 
+                        Author: David Fanuel -->
+                    <img src="img/coffee.jpg" style="width:100%">
+                </div>
+
+                <div class="myCarousel fade">
+                    <!--This image was used from this website - https://flic.kr/p/qdM8dv 
+                        Author: Meg Reilly-->
+                    <img src="img/workspace.jpg" style="width:100%">
+                </div>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <!--Here are the dots which indicate which image is displayed - placed under the images carousel-->
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <!--The JavaScript used will be in a separate file but is being called here-->
+            <script src="javascript/aboutfunction.js"></script>
+        </section>
+
+        <div class="about-p">
+            <!--This div class contains a paragraphs of information about the business to let the customer know more about the business
+            This will be visible under the carousel of images-->
+            <h3>What we offer:</h3>
+            <!--I didn't want to use a list for the text hence they are in a p tag-->
+            <p>There are booths to use for meetings and group work as
+                well as indivudual spaces.</p>
+            <p> A library corner for those who may want to read from a selection of books.</p>
+            <p> A downstairs area for games, socialising and more!</p>
+            <p>Weekly specials - a surprise for everyone</p>
+            <p>Loyalty rewards system</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!--The footer contains the business name, social media links and a disclaimer-->
+        <footer class="footer">
+            <ul>
+                <div class="p1">
+                    <!--This div holds the business name and follow us on social media text-->
+                    <p>Copyright © 2020 The Hotspot Café</p>
+                    <p>Follow us on Social Media</p>
+                </div>
+                <div class="fa">
+                    <!--
+                        This div holds the icons and links of the social media. When each icon is selected it redirects
+                        to its respective link in a new window.
+                        Icon images taken from a free online source, I chose the ones I needed - 
+                        https://www.vecteezy.com/vector-art/95039-free-social-media-icons/editor
+                    -->
+                    <a href="https://www.facebook.com/" target="_blank"><img className="fa fa-facebook"
+                            src="img/facebook.png"></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img className="fa fa-twitter"
+                            src="img/twitter.png"></a>
+                    <a href="https://www.instagram.com/amana_9/" target="_blank"><img className="fa fa-instagram"
+                            src="img/instagram.png"></a>
+                </div>
+
+                <div>
+                    <!--This div covers the disclaimer paragraph about the business-->
+                    <p class="footer-p">DISCLAIMER:<br>
+                        The Hotspot Café is a fictitious brand created solely for the purpose of the
+                        assessment of IN1010 module at City, University of London, UK. All products and
+                        people associated with The Hotspot Café are also fictitious. Any resemblance to real
+                        brands, products, or people is purely coincidental. Information provided about the
+                        product is also fictitious and should not be construed to be representative of actual
+                        products on the market in a similar product category.</p>
+                </div>
+        </footer>
+        </ul>
+
+</body>
+
+</html>
