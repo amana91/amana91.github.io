@@ -1,0 +1,209 @@
+/* Everything in this CSS file will be repeated onto all the pages I have on my website
+   All the CSS in this file is coded by me unless stated otherwise
+*/
+
+.nav {
+
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav .mainMenu {
+
+    display: flex;
+    list-style: none;
+
+}
+
+nav .openMenu {
+    text-align: right;
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu {
+
+    font-size: 2 rem;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #333;
+        transition: top 1s ease;
+        display: none;
+
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+
+    nav .openMenu {
+        display: block;
+
+    }
+
+}
+
+.hero2 {
+
+    /* Size for the hero image */
+    width: 100%;
+    height: 45vh;
+
+    /* Flexbox styling for the hero image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Text styles for the hero image */
+    text-align: center;
+
+    /* Background styling for the hero image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i0.wp.com/i.pinimg.com/originals/a8/72/af/a872af5f54238a5a1fcdc0c2cbd24675.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero2-p {
+
+    /* Text styling for the hero image header text*/
+    font-size: 7em;
+    font-family: 'Freestyle Script';
+    color: white;
+    /* Margins */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+
+}
+
+.about-p {
+
+    /* Text size and styling for the hero image paragraph text*/
+    color: white;
+    font-size: 15px;
+
+    /* Margins */
+    margin-left: 20px;
+    margin-right: 20pxs;
+}
+
+
+
+
+/* Carousel size and styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.myCarousel {
+    display: none;
+}
+
+img {
+
+    /*Images will be in the middle of the page*/
+    vertical-align: middle;
+
+}
+
+.header img {
+    height: 70px
+}
+
+.block {
+    display: block;
+}
+
+/* Carousel container size and styling */
+.carousel-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* The dots size and styling  */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+
+    /* When the image on the correct number dot will be highlighted*/
+    background-color: #717171;
+}
+
+/* Fading animation for the images in the carousel */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* This contains rule sets called keyframes which defines the style that 
+    will be applied from the moment the animation starts. The animation
+    engine will insert style between the keyframes
+*/
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* The size of th screen will change accoring to the device being used 
+    e.g. mobile version will display the hero text smaller than on desktop */
+@media only screen and (max-width: 480px) {
+
+    .hero2 {
+        font-size: 5px;
+
+    }
+}
