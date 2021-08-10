@@ -1,0 +1,298 @@
+/* Everything in this CSS file will be repeated onto all the pages I have on my website
+   All the CSS in this file is coded by me unless stated otherwise
+*/
+
+.nav {
+
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav .mainMenu {
+
+    display: flex;
+    list-style: none;
+
+}
+
+nav .openMenu {
+    text-align: right;
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu {
+
+    font-size: 2 rem;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+
+    nav .openMenu {
+        display: block;
+
+    }
+
+    nav .mainMenu li a:hover {
+        background: none;
+        columns: orange;
+        font-size: 1.6rem;
+    }
+}
+
+.container {
+    /* The calendar will be placed inside the container to keep it in place */
+    width: 100%;
+    height: 65vh;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* This is my own CSS code */
+
+.bookDate-p {
+    /* style for appearing text from calander booking */
+    left: 48rem;
+    top: 38rem;
+    color: white;
+}
+
+.datetime {
+    /* sizing for the calander booking */
+    left: 28rem;
+    top: 22rem;
+}
+
+.cal,
+.time {
+    color: white;
+}
+
+.heading-text {
+    /* Size and styling for the heading text on the booking page*/
+    left: 58rem;
+    top: 17rem;
+    color: white;
+    text-decoration: underline;
+    font-size: 23px;
+}
+
+.order {
+    /* Size and styling for the order text in the booking page */
+    left: 56rem;
+    top: 20rem;
+    color: white;
+    font-size: 20px;
+}
+
+
+/* CSS in this block is from the example, changes will be shown otherwise it's from the example */
+
+.calendar {
+    /* Size and style of the calendar - changed all to fit my webpage */
+    width: 45rem;
+    height: 52rem;
+    background-color: #333;
+}
+
+.month {
+    /* Size and styling for the months in the calendar - size and color changed to match my webpage style */
+    width: 91%;
+    height: 12rem;
+    background-color: rgb(212, 149, 31);
+    /* from example */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.month i {
+    /* arrows on the calendar - changed the size to fit to size */
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.month h1 {
+    /* This contains the name of each month and the current date - everything was changed to fit my webpage*/
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.month p {
+    /* Size of the month names - changed to fit calendar and page */
+    font-size: 1.4rem;
+}
+
+.weekdays {
+    /* Size and style of the weekday - changed to fit calendar and page */
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div {
+    /* Size and style of the weekday names - changed to fit calendar and page */
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    /* From the example */
+    width: calc(44.2rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.days {
+    /* Size and style of the days */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.days div {
+    /* Size and style for the div which contains the days names */
+    font-size: 1.2rem;
+    margin: 0.3rem;
+    width: calc(40.2rem / 7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+    /*If the day is not the current day then the block will be a hover effect */
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+    /* The dates for the previous and next month will be shown on the calendar but with the opacity 0.5 */
+    opacity: 0.5;
+}
+
+.today {
+    /*If the day is the current day then the block will be a solid colour indicating so - Changed to fit my calendar design */
+    background-color: rgb(212, 149, 31);
+}
+
+.footer {
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+* {
+    box-sizing: border-box;
+}
