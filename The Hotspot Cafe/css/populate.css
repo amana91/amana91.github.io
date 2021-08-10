@@ -1,0 +1,150 @@
+/* Everything in this CSS file will be repeated onto all the pages I have on my website
+   All the CSS in this file is coded by me unless stated otherwise
+*/
+
+body {
+
+    /* This is the body style which will be on all pages */
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1f2e4dec;
+
+}
+
+.logo {
+
+    /* Size and styling for the logo */
+    width: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    display: block;
+
+}
+
+ul {
+
+    /* Size and style of the navbar */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+
+    /* Background styles */
+    background-color: #333;
+
+}
+
+
+li:hover {
+
+    /* When the mouse hovers over the different nav bar options it
+        will have a hover effect with the opacity of 50% */
+    opacity: 50%;
+}
+
+li {
+
+    /*Style and size for the nav bar elements */
+    float: left;
+    margin: 20px;
+
+}
+
+li a {
+
+    /* Styling for list elements in nav bar */
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.footer {
+
+    /* Size and styling for the overall footer box*/
+    display: block;
+    bottom: 0;
+    z-index: 20;
+
+}
+
+.fa {
+
+    /* Background style and styling for the footer texts */
+    padding: 25px 30px 15px;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 50%;
+
+}
+
+.fa:hover {
+    /* When the mouse hovers over the different social media options it
+        will have a hover effect with the opacity of 0.7 */
+    opacity: 0.7;
+}
+
+.fa-facebook {
+
+    /* Size of facebook icon */
+    height: 64px;
+    width: 64px;
+
+}
+
+.fa-twitter {
+
+    /* Size of twitter icon */
+    height: 64px;
+    width: 64px;
+
+}
+
+.fa-instagram {
+
+    /* Size of the instagram icon */
+    height: 64px;
+    width: 64px;
+
+}
+
+
+.p1 {
+
+    /* Text styles in the footer */
+    margin-left: 0.5cm;
+    color: white;
+
+}
+
+.footer-p {
+
+    /* Text size and style in the footer */
+    font-size: 1em;
+    padding-top: 5px;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    color: white;
+
+}
+
+
+/* This will allow all the content to fit into a mobile version of the website 
+@media only screen and (min-width: 480px) {
+
+    #Links a.icon {
+        background: yellow;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #Links a.hover {
+        background-color: gray;
+        color: black;
+    }
+
+}*/
